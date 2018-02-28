@@ -3,16 +3,31 @@
   <head>
     <meta charset=utf-8>
     <title> Help me choose </title>
+    <link href ="./main.css" rel="stylesheet" type= "text/css">
   </head>
   <body>
     <h1>Help me choose between..</h1>
     <img src= "http://img.taste.com.au/w_-0kcUJ/taste/2016/11/aussie-style-beef-and-salad-tacos-86525-1.jpeg" alt="gott med tacos" width="50" height="50"/>
-</body>
-    <div>
-      <div>
+    <div class="inputsection">
+      <div class="inputs">
         <input placeholder="Something"></input>
       </div>
-    <button>Add</button>
-      </div>
-      <button>Go!</button>
+      <button class="addoptions">Add</button>
+    </div>
+    <div class="resultsection"></div>
+  <button>Go!</button>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+  $(function() {
+    $(".resultsection").hide()
+
+    var add_option = function() {
+      $(".inputs"). append("<input></input>")
+    }
+
+    $(".addoptions").click(add_option)
+  })
+  </script>
+  </body>
 </html>
